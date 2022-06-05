@@ -6,3 +6,6 @@
 
 * This web application utilizes  AJAX techniques ,such as the fetch API , to retrieve and display the latest and most popular news articles onto the user's device screen without any use of javascript libraries.
 
+## Preview
+
+Readers' corner - Google Chrome 2022-06-05 20-56-50.mp4
