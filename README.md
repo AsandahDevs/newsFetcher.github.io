@@ -4,5 +4,5 @@
 
 * The aim of this application is to provide easy access for news readers' ,into current global and local trending news for that specific day.
 
-* This web application utilizes  AJAX techniques ,such as the fetch API , to retrieve and display the latest and most popular news articles onto the user's device screen without any use of javascript libraries.
+* This web application utilizes  AJAX techniques ,such as the fetch API , to retrieve and display the latest and most popular news articles onto the user's device screen without the web application refreshing.Thus, creating a rewarding user experience.
 
