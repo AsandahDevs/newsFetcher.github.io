@@ -1,0 +1,28 @@
+.dark{
+    background-color:black;
+    color:white;
+}
+.hidden{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    height:175px;
+    width:175px;
+}
+.fetchIcon:hover{
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+.bounce-arrow:hover{
+    animation-name: bounce-arrow;
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce-arrow{
+    0% {transform: translateY(0);}
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
