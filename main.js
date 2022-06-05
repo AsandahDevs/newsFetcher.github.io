@@ -22,7 +22,6 @@ function serverRequest(){
   .then(serverData=>{
       document.getElementById('serverData').innerHTML=`
       ${Object.keys(serverData.results).map(key =>{
-        //  console.log(serverData.results[key].media[0].caption,serverData.results[key].media[0]['media-metadata'][0].url,serverData.results[key].media[0].copyright)
           return`<div class="card text-dark mb-3 p-2">
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
                       <div class='text-center'>
