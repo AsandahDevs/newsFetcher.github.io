@@ -24,11 +24,6 @@ function serverRequest(){
       ${Object.keys(serverData.results).map(key =>{
           return`<div class="card text-dark mb-3 p-2">
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
-                      <div class='text-center'>
-                        <img src="${serverData.results[key].media[0]['media-metadata'][0].url}">
-                      </div>
-                      <div class="text-center">${serverData.results[key].media[0].caption}</div>
-                        <p class='text-center'><i>copright</i>: ${serverData.results[key].media[0].copyright}</p>
                       <br>
                       <h2 class="lead text-center">[Abstract]</h2>
                         <p>${serverData.results[key].abstract}</p>
