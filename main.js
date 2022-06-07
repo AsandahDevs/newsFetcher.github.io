@@ -26,7 +26,7 @@ function serverRequest(){
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
                       <br>
                       <h2 class="lead text-center">[Abstract]</h2>
-                        <p class=" text-center">${serverData.results[key].abstract}</p>
+                        <p class="text-center">${serverData.results[key].abstract}</p>
                       <div class="text-center">
                         <button type="button" class="btn btn-info" style='width:250px'><a href="${serverData.results[key].url}">read more &raquo;</a></button>
                      </div>
