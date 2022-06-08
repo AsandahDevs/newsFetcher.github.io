@@ -24,7 +24,6 @@ function serverRequest(){
       ${Object.keys(serverData.results).map(key =>{
           return`<div class="card text-dark mb-3 p-2">
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
-                      <br>
                       <h2 class="lead text-center">[Abstract]</h2>
                         <p class="text-center">${serverData.results[key].abstract}</p>
                       <div class="text-center">
@@ -33,7 +32,7 @@ function serverRequest(){
                        <p>Source: ${serverData.results[key].source}</p>
                        <p>Author: ${serverData.results[key].byline}</p>
                        <p>Published date: ${serverData.results[key].published_date}</p
-                       <p>Updated date: ${serverData.results[key].updated}</p>
+                       <p>Updated: ${serverData.results[key].updated}</p>
                   </div>`
        }).join('')}`;
   })
