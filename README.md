@@ -1,4 +1,4 @@
-# A news article fetcher Web app 
+# A news article fetcher Web app
 
 * This is a web application that displays the latest and most popular New York Times news articles shared on facebook in the past 24 hours.The articles are fetched via the browser's API , while the  New York time's API is used as an interface for accessing and retrieving web server data, in the form of JSON,about all the necessary news articles needed by the news reader.
 
@@ -8,7 +8,4 @@
 
 ## Preview
 
-
-https://user-images.githubusercontent.com/89397749/172071716-9ba03ae9-c49a-4516-b4c8-5287d6b00120.mp4
-
-
+<https://user-images.githubusercontent.com/89397749/172071716-9ba03ae9-c49a-4516-b4c8-5287d6b00120.mp4>
