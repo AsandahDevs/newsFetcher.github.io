@@ -32,7 +32,7 @@ function serverRequest() {
       document.getElementById("serverData").innerHTML = `
       ${Object.keys(serverData.results)
         .map((key) => {
-          return `<div class="card text-dark mb-3 p-2 centred-content animate__animated animate__backInDown" style='width:450px'>
+          return `<div class="card text-dark mb-3 p-2 centred-content animate__animated animate__backInDown" style='width:375px'>
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
                       <h2 class="lead text-center">[Abstract]</h2>
                         <p class="text-center">${serverData.results[key].abstract}</p>
