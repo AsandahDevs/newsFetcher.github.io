@@ -8,15 +8,6 @@
 a {
   text-decoration: none;
 }
-h1 {
-  font-size: 48px;
-  font-family: "Tangerine", cursive;
-}
-p {
-  font-size: medium;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-}
 img {
   height: 175px;
   width: 175px;
@@ -26,7 +17,7 @@ img {
   animation-iteration-count: none;
   transform-origin: bottom;
 }
-.bounce-button:hover {
+.bounce-arrow:hover {
   animation-name: bounce-arrow;
   animation-timing-function: ease-in-out;
 }
