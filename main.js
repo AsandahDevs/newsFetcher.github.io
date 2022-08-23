@@ -17,8 +17,13 @@ const quotesArray = [
 
 function quoteGenerator() {
   let randomQuote = Math.round(Math.random() * quotesArray.length);
-  return (document.getElementById("displayQuote").innerHTML =
-    quotesArray[randomQuote]);
+  if (randomQuote == 8) {
+    return (document.getElementById("displayQuote").innerHTML =
+      "error loading quote");
+  } else {
+    return (document.getElementById("displayQuote").innerHTML =
+      quotesArray[randomQuote]);
+  }
 }
 
 window.addEventListener("load", quoteGenerator);
