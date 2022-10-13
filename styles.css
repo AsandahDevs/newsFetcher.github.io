@@ -1,7 +1,10 @@
-.dark {
-  background-color: black;
-  color: white;
+body {
+  background-image: url("/newsFetcher.github.io/Founding_fathers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 .hidden {
   display: none;
 }
