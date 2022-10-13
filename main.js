@@ -37,7 +37,8 @@ function serverRequest() {
       document.getElementById("serverData").innerHTML = `
       ${Object.keys(serverData.results)
         .map((key) => {
-          return `<div class="card text-dark mb-3 p-2 centred-content animate__animated animate__backInDown" style='width:375px'>
+          return `
+          <div class="card text-dark mb-3 p-2 centred-content animate__animated animate__backInDown" style='width:325px; margin-right:16px'>
                     <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
                       <h2 class="lead text-center">[Abstract]</h2>
                         <p class="text-center">${serverData.results[key].abstract}</p>
@@ -53,7 +54,9 @@ function serverRequest() {
         .join("")}`;
     })
     .catch((error) => {
-      document.getElementById("serverData").innerHTML = error.message;
+      document.getElementById(
+        "serverData"
+      ).innerHTML = `<p class="text-center">${error.message} data !</p>`;
     });
 }
 
@@ -65,3 +68,21 @@ const disappear = () => {
 };
 
 document.getElementById("fetchButton").addEventListener("click", disappear);
+
+function filter() {
+  let searchTerm = document.getElementById("searchField").value;
+  let newsArticles = document.querySelectorAll("div.card");
+  for (let i = 0; i < newsArticles.length; i++) {
+    if (
+      newsArticles[i].textContent
+        .toLocaleLowerCase()
+        .includes(searchTerm.toLocaleLowerCase())
+    ) {
+      newsArticles[i].style.display = "block";
+    } else {
+      newsArticles[i].style.display = "none";
+    }
+  }
+}
+
+document.getElementById("searchField").addEventListener("input", filter);
