@@ -49,19 +49,28 @@
       <div class="card text-dark p-2">
         <p id="displayQuote" class="card-text"></p>
       </div>
+      <br />
+      <form>
+        <input
+          id="searchField"
+          class="form-control me-2"
+          type="search"
+          placeholder="Search news..."
+          aria-label="Search"
+        />
+      </form>
       <div class="text-center">
         <button
           type="button"
           id="fetchButton"
           class="btn btn-outline-info m-3 bounce-button fetchIcon"
         >
-          Load latest news contents
+          Load latest news
           <br />
-          <!-- <i class="bi bi-arrow-down-circle-fill"></i> -->
         </button>
       </div>
       <br />
-      <div id="serverData"></div>
+      <div id="serverData" class="row"><div class="col-2"></div></div>
     </main>
     <footer>&copy; Asanda Majola 2022</footer>
     <!--Loading a JS bundle with Popper-->
