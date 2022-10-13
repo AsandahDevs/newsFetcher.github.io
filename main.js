@@ -1,9 +1,3 @@
-function modeToggle() {
-  document.body.classList.toggle("dark");
-}
-
-document.getElementById("modeSwitch").addEventListener("click", modeToggle);
-
 const quotesArray = [
   '"The ignorance of one voter in a democracy impairs the security of all."-John F.Kennedy',
   '"Democracy cannot succeed unless those who express their choice are prepared to choose wisely. The real safeguard of democracy, therefore, is education."-Franklin D.Roosevelt',
@@ -71,7 +65,7 @@ document.getElementById("fetchButton").addEventListener("click", disappear);
 
 function filter() {
   let searchTerm = document.getElementById("searchField").value;
-  let newsArticles = document.querySelectorAll("div.card");
+  let newsArticles = document.querySelectorAll("div.card.centred-content");
   for (let i = 0; i < newsArticles.length; i++) {
     if (
       newsArticles[i].textContent
