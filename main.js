@@ -23,26 +23,32 @@ function quoteGenerator() {
 window.addEventListener("load", quoteGenerator);
 
 function serverRequest() {
+  document.getElementById(
+    "serverData"
+  ).innerHTML = `<div class="spinner-border" role="status" style="display:block;margin:auto">
+  <span class="visually-hidden">Loading...</span>
+</div>`;
+
   fetch(
     "https://api.nytimes.com/svc/mostpopular/v2/shared/1/facebook.json?api-key=ZIOGUOFPYAk9mHhATNHn8JNqUSxrp5T3"
   )
     .then((serverResponse) => serverResponse.json())
     .then((serverData) => {
       document.getElementById("serverData").innerHTML = `
-      ${Object.keys(serverData.results)
+      ${serverData.results
         .map((key) => {
           return `
           <div class="card text-dark mb-3 p-2 centred-content animate__animated animate__backInDown" style='width:325px; margin-right:16px'>
-                    <h1 class="card-title"><i>${serverData.results[key].title}</i></h1> 
+                    <h1 class="card-title"><i>${key.title}</i></h1>
                       <h2 class="lead text-center">[Abstract]</h2>
-                        <p class="text-center">${serverData.results[key].abstract}</p>
+                        <p class="text-center">${key.abstract}</p>
                       <div class="text-center">
-                        <button type="button" class="btn btn-info" style='width:200px'><a href="${serverData.results[key].url}">read more &raquo;</a></button>
+                        <button type="button" class="btn btn-info" style='width:200px'><a href="${key.url}">read more &raquo;</a></button>
                      </div>
-                       <p>Source: ${serverData.results[key].source}</p>
-                       <p>Author: ${serverData.results[key].byline}</p>
-                       <p>Published date: ${serverData.results[key].published_date}</p
-                       <p>Updated: ${serverData.results[key].updated}</p>
+                       <p>Source: ${key.source}</p>
+                       <p>Author: ${key.byline}</p>
+                       <p>Published date: ${key.published_date}</p
+                       <p>Updated: ${key.updated}</p>
                   </div>`;
         })
         .join("")}`;
