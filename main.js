@@ -54,9 +54,14 @@ function serverRequest() {
         .join("")}`;
     })
     .catch((error) => {
-      document.getElementById(
-        "serverData"
-      ).innerHTML = `<p class="text-center">${error.message} data !</p>`;
+      document.getElementById("serverData").innerHTML = `
+        <h1>ERR_INTERNET_DISCONNECTED !</h1>
+        <p>
+          ${error.message} required data from our servers due to a possible
+          poor internet connection.Reconnect to your network provider and
+          try again.
+        </p>
+    `;
     });
 }
 
