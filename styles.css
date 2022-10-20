@@ -13,11 +13,11 @@ a {
 }
 h1 {
   font-size: 48px;
-  font-family: "Tangerine", cursive;
+  font-family: cursive;
 }
 p {
   font-size: medium;
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   font-weight: bold;
 }
 img {
